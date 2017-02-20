@@ -1,0 +1,22 @@
+﻿
+@model List<DerekDemo.Model.User>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@foreach (var item in Model)
+{
+    <h3>@item.UserName</h3>
+    <br/>
+    <span>Invoices:</span>
+    <br/>
+    foreach(var invoice in item.Invoices)
+    {
+        @invoice.DueDate.ToShortDateString() <span>-</span> @invoice.Amount.ToString() <br/>
+    }
+}
+
