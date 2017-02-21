@@ -51,6 +51,11 @@
   <ItemGroup>
     <Compile Include="DerekContext.cs" />
     <Compile Include="GenericService.cs" />
+    <Compile Include="Migrations\201702201705502_InitialCreate.cs" />
+    <Compile Include="Migrations\201702201705502_InitialCreate.Designer.cs">
+      <DependentUpon>201702201705502_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,6 +68,11 @@
       <Project>{6DF44526-84B8-40BA-85B8-5C0223610971}</Project>
       <Name>DerekDemo.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201702201705502_InitialCreate.resx">
+      <DependentUpon>201702201705502_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
